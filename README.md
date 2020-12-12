@@ -1,7 +1,7 @@
 # vagrant-mba
 
 # Acesso ao mysql da vm
-mysql --host=127.0.0.1 --port=3339 -u root -proot
+mysql --host=127.0.0.1 --port=3306 -u root -proot
 
 
 # Commandos
