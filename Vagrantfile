@@ -4,7 +4,7 @@ $script_inline = <<-SCRIPT
   apt-get update && apt-get install -y mysql-server-5.7 && \
   sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf && \
   mysql -u root -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION; FLUSH PRIVILEGES; SET GLOBAL max_connect_errors=10000;" && \
-  sudo service mysql restart
+  service mysql restart
 SCRIPT
 
 Vagrant.configure("2") do |config|
